@@ -1,11 +1,7 @@
 # opensim.currency.trunk
 mirror
 
-////////////////////////////////////////////////////////////////////////////////////////////
-//
-//  DTL/NSL Secure Money Server for Linux/Unix
-//                                                        by Fumi.Iseki and NSL '19 11/5
-//                                                        http://www.nsl.tuis.ac.jp
+## DTL/NSL Secure Money Server for Linux/Unix by Fumi.Iseki and NSL '19 11/5 http://www.nsl.tuis.ac.jp
 
 
 
