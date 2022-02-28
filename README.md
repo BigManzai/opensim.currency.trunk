@@ -20,25 +20,25 @@ Attention)
 
 
 1. Install
-
- # cd opensim-0.9.x-source
- # tar xzfv opensim.currency-0.9.x.tar.gz 
+```
+     cd opensim-0.9.x-source
+     tar xzfv opensim.currency-0.9.x.tar.gz 
  
- # ./runprebuild.sh 
- # xbuild /target:CLean 
- # xbuild 
+     ./runprebuild.sh 
+     xbuild /target:CLean 
+     xbuild 
 
- # cd opensim.currency-0.9.x
- # ./build.sh
-
+     cd opensim.currency-0.9.x
+     ./build.sh
+```
 
 
 2. Setting
 
 2-1. Money Server
 
- # cd opensim-0.9.x-source
- # vi bin/MoneyServer.ini 
+     cd opensim-0.9.x-source
+     vi bin/MoneyServer.ini 
 
   - Plese set hostname, database, username and password of MySQL at [MySql] section.
   - If you use Banker Avatar, please set UUID of Banker Avatar to "BankerAvatar" in MoneyServer.ini.
@@ -56,9 +56,10 @@ Attention)
 
 2-2. Region Server
 
- # cd opensim-0.9.x-source
- # vi bin/OpenSim.ini 
+     cd opensim-0.9.x-source
+     vi bin/OpenSim.ini 
 
+```
  [Economy]
    SellEnabled = "true"
    CurrencyServer = "https://(MoneyServer's Name or IP):8008/"  
@@ -70,7 +71,7 @@ Attention)
 
    ;; Money Unit fee to create groups
    PriceGroupCreate = 100
-
+```
 
  Attention) 
   - Module name was changed from DTLMoneyModule to DTLNSLMoneyModule
@@ -87,12 +88,13 @@ Attention)
   - Please see also: http://www.nsl.tuis.ac.jp/xoops/modules/xpwiki/?OpenSim%2FMoneyServer%2FHelper%20Script
 
  ex.)
-  # mkdir /var/www/currency
-  # cp -Rpd Scripts/* /var/www/currency
-  # cd /var/www/currency
-  # ./setup_sripts.sh
-  # chown -R www-data.www-data .
-  # vi include/config.php
+ 
+     mkdir /var/www/currency
+     cp -Rpd Scripts/* /var/www/currency
+     cd /var/www/currency
+     ./setup_sripts.sh
+     chown -R www-data.www-data .
+     vi include/config.php
 
   - Please execute viewer with "-helperuri [ENV_HELPER_URL/]" option. 
     Here, ENV_HELPER_URL is helper directory url in include/config.php.
@@ -104,23 +106,23 @@ Attention)
 
 3-1. Robust Server
 
- # cd opensim-0.9.x-source
- # cd bin
- # mono Robust.exe
+     cd opensim-0.9.x-source
+     cd bin
+     mono Robust.exe
 
 
 3-2. Money Server
 
- # cd opensim-0.9.x-source
- # cd bin
- # mono MoneyServer.exe
+     cd opensim-0.9.x-source
+     cd bin
+     mono MoneyServer.exe
 
 
 3-3. Region Server
 
- # cd opensim-0.9.x-source
- # cd bin
- # mono OpenSim.exe
+     cd opensim-0.9.x-source
+     cd bin
+     mono OpenSim.exe
 
 
 
