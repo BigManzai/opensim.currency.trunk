@@ -1,0 +1,2 @@
+# opensim.currency.trunk
+mirror
